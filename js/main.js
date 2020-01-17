@@ -6,10 +6,13 @@
    //print('some message');
    console.log("some message - from JavaScript");
 
-   //find the buttom element on the page by its ID with Javascript
+   //find the buttom element on the page by its ID with Javascript,
+   //make connect on the page, go to document find that elements(mybuttom,h1 and ..)
+   //queryElementById(old)=querySelector(new)
    let theButtom = document.querySelector("#myButtom"),
        theHeading= document.querySelector('h1'),
-       svgImage= document.querySelector("#svgGraphic");
+       //svgImage= document.querySelector("#svgGraphic"),
+       allSVGs= document.querySelectorAll(".svg");
 
    // this function changes the heading text
    function changeText(){
@@ -20,8 +23,12 @@
   function logSVG(){
     console.log(this.id);
   }
-
+    //run function, click or mouseover
     theButtom.addEventListener("click",changeText);
-    svgImage.addEventListener("mouseover",logSVG);
+
+    //svgImage.addEventListener("click",logSVG);
+    //svgImage2.addEventListener("click",logSVG);
+    allSVGs.forEach(item => item.addEventListener("click",logSVG));
     //document.querySelector('h1').textContent = "Hello there from console";
+
 })();
