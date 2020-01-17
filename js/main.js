@@ -9,8 +9,7 @@
    //find the buttom element on the page by its ID with Javascript,
    //make connect on the page, go to document find that elements(mybuttom,h1 and ..)
    //queryElementById(old)=querySelector(new)
-   let theButtom = document.querySelector("#myButtom"),
-       theHeading= document.querySelector('h1'),
+   let theHeading= document.querySelector('h1'),
        //svgImage= document.querySelector("#svgGraphic"),
        allSVGs= document.querySelectorAll(".svg");
 
@@ -24,7 +23,7 @@
     console.log(this.id);
   }
     //run function, click or mouseover
-    theButtom.addEventListener("click",changeText);
+    //theButtom.addEventListener("click",changeText);
 
     //svgImage.addEventListener("click",logSVG);
     //svgImage2.addEventListener("click",logSVG);
