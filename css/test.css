@@ -1,0 +1,44 @@
+body{
+  font-size: 14px;
+  padding: 1em;
+}
+
+main span{
+  cursor: pointer;
+}
+
+.selected{
+  color: green;
+  padding-left: 0.5em;/*7px*/
+}
+
+.selected:not(.wrapper):before{
+  content:'\2713';
+}
+
+.selected::after {
+  content: "→";
+}
+
+object{
+  width: 12em;
+}
+
+.wrapper{
+  display: inline-block;
+  position:relative;
+  cursor: pointer;
+}
+
+.wrapper.selected::after{
+    content:'\2713';
+    font-size: 6em;
+    position: absolute;
+     top:-20px;
+    right: -45px;
+  }
+
+/*all elements under wrapper*/
+.wrapper>*{
+  pointer-events: none;
+}
